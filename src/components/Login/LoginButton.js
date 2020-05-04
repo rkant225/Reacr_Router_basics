@@ -2,14 +2,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as Actions from '../../Redux/actions';
 import history from '../../Utils/History';
+import styles from './LoginButton.module.css';
 
 class LoginButton extends React.Component {
 
 
   render(){
     return (
-        <div>
-            {this.props.isLoggedIn ? <button onClick={()=> this.props.LogOutAction()}>Log Out</button> : <button onClick={() => history.push("/login")}>Log In</button>}
+        <div className={styles.loginButton}>
+            {this.props.isLoggedIn ? <a onClick={()=> this.props.LogOutAction()}>Log Out</a> : <a onClick={() => history.push("/login")}>Log In</a>}
+            {!this.props.isLoggedIn && <a onClick={() => history.push("/signup")}>Sign Up</a>}
         </div>
     );
   }  

@@ -1,0 +1,72 @@
+.signupForm{
+    margin: auto;
+    margin-top: 8rem;
+    min-height: 30%;
+    width: 45%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.errorMessage{
+    color: rgb(54, 38, 38);
+    background-color: rgba(255, 92, 96, 6.767);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.successMessage{
+    color: rgb(54, 38, 38);
+    background-color: rgba(0, 255, 0, 0.5);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.field{
+    margin-left: 0px;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: 30px;  
+    padding: 20px;
+}
+
+.field input{
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,255,0.4);
+    outline: none;
+}
+
+.label{
+    text-align: left;
+    flex: 30%;
+}
+
+.submitButton{
+    text-align: center;
+}
+
+.submitButton button{
+    padding: 10px 0px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(0,0,255,0.4);
+    outline: none;
+}
+
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+}
+
+.fieldErrorMessage{
+    color: red;
+    font-size: 14px;
+    padding-top: 8px;
+}

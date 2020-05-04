@@ -20,3 +20,26 @@ export const Login = (loginDetails, redirectTo) =>{
 export const LogOut = () =>{
     return {type : "LOGOUT"}
 }
+
+export const ResetSignupState =()=>{
+    return{type : 'SIGNUP_RESET_STATE'}
+}
+
+export const SignUp = (signUpDetails) =>{    
+    return async (dispatch)=>{
+        const response = await axios.get('http://localhost:3001/users');
+        const existingUsers = response.data;
+        const userFound = existingUsers.find(user => user.userName === signUpDetails.userName);
+
+        if(userFound){
+            console.log('already Exist')
+            dispatch({ type : 'SIGNUP_ERROR', payload : {error : "User alreeady exists. :("}})
+        }
+        else{
+            console.log('OKKK')
+            await axios.post('http://localhost:3001/users', signUpDetails);
+            dispatch({ type : 'SIGNUP_SUCCESS', payload : {successMessage : "User created successfully. You will be redirected to login page."}})
+            setTimeout(()=> history.push("/login"), 3000);
+        }
+    }
+}
