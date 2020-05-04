@@ -11,8 +11,8 @@ class Writters extends React.Component {
             <ul>
                 {writers && writers.map(wr =><li key={wr.id}> <Link to={`${match.url}/${wr.id}`}>{wr.name}</Link> </li>)}
             </ul>
-            <Route path={match.url} exact render={()=><h3>Please select any witer...!!!</h3>}/>
-            <Route path={`${match.url}/:userId`} render={(props) => <Writter {...props} writers={writers}/>}/>
+            <Route path={match.path} exact render={()=><h3>Please select any witer...!!!</h3>}/>
+            <Route path={`${match.path}/:userId`} render={(props) => <Writter {...props} writers={writers}/>}/>
         </Fragment>
     );
   }

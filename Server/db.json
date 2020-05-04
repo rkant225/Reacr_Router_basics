@@ -126,5 +126,31 @@
         "description": "",
         "published": 2002
       }
+    ],
+    "users" : [
+      {
+        "id" : "rkant225",
+        "firstName" :  "Rahul",
+        "LastName" :  "Singh",
+        "userName" :  "rkant225",
+        "password" : "abc@123",
+        "email" : "rkant225@gmail.com"
+      },
+      {
+        "id" : "ravi1122",
+        "firstName" :  "Ravi",
+        "LastName" :  "Singh",
+        "userName" :  "ravi1122",
+        "password" : "abc@123",
+        "email" : "ravi@gmail.com"
+      },
+      {
+        "id" : "a",
+        "firstName" :  "a",
+        "LastName" :  "a",
+        "userName" :  "a",
+        "password" : "a",
+        "email" : "a@gmail.com"
+      }
     ]
   }

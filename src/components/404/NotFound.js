@@ -4,7 +4,7 @@ class NotFound extends React.Component {
   render(){
     return (
         <h2>
-          Not found the resource you are looking for...!!!
+          Unable to find the resource you are looking for...!!!
         </h2>
     );
   }  
